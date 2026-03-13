@@ -1,0 +1,441 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Secret Manager API
+  description: >-
+    The Secret Manager API enables creating, managing, and accessing secrets
+    and their versions, providing secure storage for sensitive configuration
+    data and credentials.
+  version: 1.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/secret-manager
+servers:
+  - url: https://secretmanager.googleapis.com/v1
+    description: Google Cloud Secret Manager Production
+paths:
+  /projects/{projectId}/secrets:
+    get:
+      operationId: listSecrets
+      summary: List secrets
+      description: Lists secrets in a project.
+      tags:
+        - Secrets
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+        - name: filter
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  secrets:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Secret'
+                  nextPageToken:
+                    type: string
+                  totalSize:
+                    type: integer
+    post:
+      operationId: createSecret
+      summary: Create a secret
+      description: Creates a new secret in a project.
+      tags:
+        - Secrets
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Secret'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Secret'
+  /projects/{projectId}/secrets/{secretId}:
+    get:
+      operationId: getSecret
+      summary: Get a secret
+      description: Retrieves metadata about a secret.
+      tags:
+        - Secrets
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Secret'
+    patch:
+      operationId: updateSecret
+      summary: Update a secret
+      description: Updates metadata of a secret.
+      tags:
+        - Secrets
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: updateMask
+          in: query
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Secret'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Secret'
+    delete:
+      operationId: deleteSecret
+      summary: Delete a secret
+      description: Deletes a secret and all of its versions.
+      tags:
+        - Secrets
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /projects/{projectId}/secrets/{secretId}:addVersion:
+    post:
+      operationId: addSecretVersion
+      summary: Add a secret version
+      description: Creates a new secret version containing secret data.
+      tags:
+        - Secret Versions
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+                  properties:
+                    data:
+                      type: string
+                      description: Base64-encoded secret data.
+              required:
+                - payload
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecretVersion'
+  /projects/{projectId}/secrets/{secretId}/versions:
+    get:
+      operationId: listSecretVersions
+      summary: List secret versions
+      description: Lists secret versions for a secret.
+      tags:
+        - Secret Versions
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  versions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SecretVersion'
+                  nextPageToken:
+                    type: string
+                  totalSize:
+                    type: integer
+  /projects/{projectId}/secrets/{secretId}/versions/{versionId}:access:
+    get:
+      operationId: accessSecretVersion
+      summary: Access a secret version
+      description: Accesses a secret version's data.
+      tags:
+        - Secret Versions
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: versionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  payload:
+                    type: object
+                    properties:
+                      data:
+                        type: string
+                        description: Base64-encoded secret data.
+                      dataCrc32c:
+                        type: string
+  /projects/{projectId}/secrets/{secretId}/versions/{versionId}:destroy:
+    post:
+      operationId: destroySecretVersion
+      summary: Destroy a secret version
+      description: Destroys a secret version, making the data inaccessible.
+      tags:
+        - Secret Versions
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: secretId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: versionId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                etag:
+                  type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecretVersion'
+components:
+  schemas:
+    Secret:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the secret.
+        replication:
+          type: object
+          description: Replication policy of the secret.
+          properties:
+            automatic:
+              type: object
+              properties:
+                customerManagedEncryption:
+                  type: object
+                  properties:
+                    kmsKeyName:
+                      type: string
+            userManaged:
+              type: object
+              properties:
+                replicas:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      location:
+                        type: string
+                      customerManagedEncryption:
+                        type: object
+                        properties:
+                          kmsKeyName:
+                            type: string
+        createTime:
+          type: string
+          format: date-time
+          description: Timestamp when the secret was created.
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+          description: Labels attached to the secret.
+        topics:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+          description: Pub/Sub topics for secret notifications.
+        expireTime:
+          type: string
+          format: date-time
+          description: Timestamp when the secret expires.
+        ttl:
+          type: string
+          description: Time-to-live duration for the secret.
+        etag:
+          type: string
+          description: Entity tag for optimistic concurrency control.
+        rotation:
+          type: object
+          properties:
+            nextRotationTime:
+              type: string
+              format: date-time
+            rotationPeriod:
+              type: string
+        versionAliases:
+          type: object
+          additionalProperties:
+            type: string
+          description: Mapping of version aliases to version numbers.
+    SecretVersion:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the secret version.
+        createTime:
+          type: string
+          format: date-time
+          description: Timestamp when the version was created.
+        destroyTime:
+          type: string
+          format: date-time
+          description: Timestamp when the version was destroyed.
+        state:
+          type: string
+          enum:
+            - STATE_UNSPECIFIED
+            - ENABLED
+            - DISABLED
+            - DESTROYED
+          description: Current state of the secret version.
+        etag:
+          type: string
+          description: Entity tag for optimistic concurrency control.
+        replicationStatus:
+          type: object
+          description: Replication status of the secret version.
+        clientSpecifiedPayloadChecksum:
+          type: boolean
+          description: Whether client specified a payload checksum.
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud

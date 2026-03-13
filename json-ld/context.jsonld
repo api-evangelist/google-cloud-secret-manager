@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcloud": "https://cloud.google.com/secret-manager/docs/reference/rest/v1/",
+    "Secret": "gcloud:projects.secrets",
+    "SecretVersion": "gcloud:projects.secrets.versions",
+    "name": "https://schema.org/name",
+    "description": "https://schema.org/description",
+    "createTime": "https://schema.org/dateCreated",
+    "expireTime": "https://schema.org/expires",
+    "labels": "https://schema.org/keywords",
+    "state": "https://schema.org/status",
+    "replication": "https://schema.org/distribution",
+    "rotation": "https://schema.org/repeatFrequency",
+    "etag": "https://schema.org/version",
+    "topics": "https://schema.org/about"
+  }
+}
