@@ -16,7 +16,7 @@ paths:
   /projects/{projectId}/secrets:
     get:
       operationId: listSecrets
-      summary: List secrets
+      summary: Google Cloud Secret Manager List secrets
       description: Lists secrets in a project.
       tags:
         - Secrets
@@ -56,7 +56,7 @@ paths:
                     type: integer
     post:
       operationId: createSecret
-      summary: Create a secret
+      summary: Google Cloud Secret Manager Create a secret
       description: Creates a new secret in a project.
       tags:
         - Secrets
@@ -87,7 +87,7 @@ paths:
   /projects/{projectId}/secrets/{secretId}:
     get:
       operationId: getSecret
-      summary: Get a secret
+      summary: Google Cloud Secret Manager Get a secret
       description: Retrieves metadata about a secret.
       tags:
         - Secrets
@@ -111,7 +111,7 @@ paths:
                 $ref: '#/components/schemas/Secret'
     patch:
       operationId: updateSecret
-      summary: Update a secret
+      summary: Google Cloud Secret Manager Update a secret
       description: Updates metadata of a secret.
       tags:
         - Secrets
@@ -145,7 +145,7 @@ paths:
                 $ref: '#/components/schemas/Secret'
     delete:
       operationId: deleteSecret
-      summary: Delete a secret
+      summary: Google Cloud Secret Manager Delete a secret
       description: Deletes a secret and all of its versions.
       tags:
         - Secrets
@@ -166,7 +166,7 @@ paths:
   /projects/{projectId}/secrets/{secretId}:addVersion:
     post:
       operationId: addSecretVersion
-      summary: Add a secret version
+      summary: Google Cloud Secret Manager Add a secret version
       description: Creates a new secret version containing secret data.
       tags:
         - Secret Versions
@@ -206,7 +206,7 @@ paths:
   /projects/{projectId}/secrets/{secretId}/versions:
     get:
       operationId: listSecretVersions
-      summary: List secret versions
+      summary: Google Cloud Secret Manager List secret versions
       description: Lists secret versions for a secret.
       tags:
         - Secret Versions
@@ -248,7 +248,7 @@ paths:
   /projects/{projectId}/secrets/{secretId}/versions/{versionId}:access:
     get:
       operationId: accessSecretVersion
-      summary: Access a secret version
+      summary: Google Cloud Secret Manager Access a secret version
       description: Accesses a secret version's data.
       tags:
         - Secret Versions
@@ -289,7 +289,7 @@ paths:
   /projects/{projectId}/secrets/{secretId}/versions/{versionId}:destroy:
     post:
       operationId: destroySecretVersion
-      summary: Destroy a secret version
+      summary: Google Cloud Secret Manager Destroy a secret version
       description: Destroys a secret version, making the data inaccessible.
       tags:
         - Secret Versions
