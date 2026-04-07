@@ -12,12 +12,12 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
+  - Configuration
+  - Credentials
   - Google Cloud
+  - Key Management
   - Secrets
   - Security
-  - Key Management
-  - Credentials
-  - Configuration
 apis:
   - name: Google Cloud Secret Manager API
     description: >-
@@ -27,10 +27,10 @@ apis:
     humanURL: https://cloud.google.com/secret-manager
     baseURL: https://secretmanager.googleapis.com
     tags:
-      - Secrets
-      - Versions
-      - Security
       - Configuration
+      - Secrets
+      - Security
+      - Versions
     properties:
       - type: Documentation
         url: https://cloud.google.com/secret-manager/docs/reference/rest

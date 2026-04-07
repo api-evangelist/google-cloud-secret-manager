@@ -439,3 +439,6 @@ components:
           tokenUrl: https://oauth2.googleapis.com/token
           scopes:
             https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud
+tags:
+  - name: Secret Versions
+  - name: Secrets
