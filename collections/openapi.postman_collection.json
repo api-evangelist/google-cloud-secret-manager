@@ -1,0 +1,1125 @@
+{
+  "item": [
+    {
+      "id": "51712106-4e19-4dad-a7ac-b537ced42a0a",
+      "name": "Secret Versions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3e711acb-de0a-4c33-8495-826f8a53b045",
+          "name": "Google Cloud Secret Manager Add a secret version",
+          "request": {
+            "name": "Google Cloud Secret Manager Add a secret version",
+            "description": {
+              "content": "Creates a new secret version containing secret data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets",
+                "{{secretId}}:addVersion"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"payload\": {\n    \"data\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f85a41fc-508a-4320-bdfe-eaf0d30e8355",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets",
+                    "{{secretId}}:addVersion"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"payload\": {\n    \"data\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"createTime\": \"2010-10-23T16:10:56.604Z\",\n  \"destroyTime\": \"1983-10-25T11:32:43.523Z\",\n  \"state\": \"STATE_UNSPECIFIED\",\n  \"etag\": \"string\",\n  \"replicationStatus\": {},\n  \"clientSpecifiedPayloadChecksum\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e6655417-102a-4be0-b330-1c5a7d65d2f4",
+          "name": "Google Cloud Secret Manager List secret versions",
+          "request": {
+            "name": "Google Cloud Secret Manager List secret versions",
+            "description": {
+              "content": "Lists secret versions for a secret.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets",
+                ":secretId",
+                "versions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "secretId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b3ef8614-e3c7-4d34-b979-cf3256962209",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets",
+                    ":secretId",
+                    "versions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "secretId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"versions\": [\n    {\n      \"name\": \"string\",\n      \"createTime\": \"2003-10-28T13:17:28.676Z\",\n      \"destroyTime\": \"1995-01-14T16:28:13.520Z\",\n      \"state\": \"DESTROYED\",\n      \"etag\": \"string\",\n      \"replicationStatus\": {},\n      \"clientSpecifiedPayloadChecksum\": true\n    },\n    {\n      \"name\": \"string\",\n      \"createTime\": \"1974-05-12T03:59:10.807Z\",\n      \"destroyTime\": \"1968-04-29T22:43:31.718Z\",\n      \"state\": \"ENABLED\",\n      \"etag\": \"string\",\n      \"replicationStatus\": {},\n      \"clientSpecifiedPayloadChecksum\": false\n    }\n  ],\n  \"nextPageToken\": \"string\",\n  \"totalSize\": 1006\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fc383d95-6223-4377-88ff-085a0ebce3e8",
+          "name": "Google Cloud Secret Manager Access a secret version",
+          "request": {
+            "name": "Google Cloud Secret Manager Access a secret version",
+            "description": {
+              "content": "Accesses a secret version's data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets",
+                ":secretId",
+                "versions",
+                "{{versionId}}:access"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "secretId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94b8eaff-bd66-435d-b0f6-d74122ca6f51",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets",
+                    ":secretId",
+                    "versions",
+                    "{{versionId}}:access"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "secretId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"payload\": {\n    \"data\": \"string\",\n    \"dataCrc32c\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "288cd507-7d08-4e3a-943b-008e1a3c2e5c",
+          "name": "Google Cloud Secret Manager Destroy a secret version",
+          "request": {
+            "name": "Google Cloud Secret Manager Destroy a secret version",
+            "description": {
+              "content": "Destroys a secret version, making the data inaccessible.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets",
+                ":secretId",
+                "versions",
+                "{{versionId}}:destroy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "secretId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"etag\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "839681ae-88a5-46dc-90bc-144518546f14",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets",
+                    ":secretId",
+                    "versions",
+                    "{{versionId}}:destroy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "secretId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"etag\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"createTime\": \"2010-10-23T16:10:56.604Z\",\n  \"destroyTime\": \"1983-10-25T11:32:43.523Z\",\n  \"state\": \"STATE_UNSPECIFIED\",\n  \"etag\": \"string\",\n  \"replicationStatus\": {},\n  \"clientSpecifiedPayloadChecksum\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "146d2910-1e4d-4d66-9a04-6769c9a2fbb3",
+      "name": "Secrets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "87a123b2-7e4a-46c1-8ddd-27798d461cda",
+          "name": "Google Cloud Secret Manager List secrets",
+          "request": {
+            "name": "Google Cloud Secret Manager List secrets",
+            "description": {
+              "content": "Lists secrets in a project.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d0a02683-e2d4-4b33-8943-5583f9213900",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"secrets\": [\n    {\n      \"name\": \"string\",\n      \"replication\": {\n        \"automatic\": {\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        },\n        \"userManaged\": {\n          \"replicas\": [\n            {\n              \"location\": \"string\",\n              \"customerManagedEncryption\": {\n                \"kmsKeyName\": \"string\"\n              }\n            },\n            {\n              \"location\": \"string\",\n              \"customerManagedEncryption\": {\n                \"kmsKeyName\": \"string\"\n              }\n            }\n          ]\n        }\n      },\n      \"createTime\": \"1967-10-20T06:50:05.111Z\",\n      \"labels\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"topics\": [\n        {\n          \"name\": \"string\"\n        },\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"expireTime\": \"2010-01-23T19:09:43.127Z\",\n      \"ttl\": \"string\",\n      \"etag\": \"string\",\n      \"rotation\": {\n        \"nextRotationTime\": \"2002-02-24T06:04:35.456Z\",\n        \"rotationPeriod\": \"string\"\n      },\n      \"versionAliases\": {\n        \"key_0\": \"string\"\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"replication\": {\n        \"automatic\": {\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        },\n        \"userManaged\": {\n          \"replicas\": [\n            {\n              \"location\": \"string\",\n              \"customerManagedEncryption\": {\n                \"kmsKeyName\": \"string\"\n              }\n            },\n            {\n              \"location\": \"string\",\n              \"customerManagedEncryption\": {\n                \"kmsKeyName\": \"string\"\n              }\n            }\n          ]\n        }\n      },\n      \"createTime\": \"1995-03-07T15:10:31.556Z\",\n      \"labels\": {\n        \"key_0\": \"string\"\n      },\n      \"topics\": [\n        {\n          \"name\": \"string\"\n        },\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"expireTime\": \"1988-09-07T07:41:08.863Z\",\n      \"ttl\": \"string\",\n      \"etag\": \"string\",\n      \"rotation\": {\n        \"nextRotationTime\": \"2023-09-20T12:40:53.480Z\",\n        \"rotationPeriod\": \"string\"\n      },\n      \"versionAliases\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"string\",\n  \"totalSize\": 7330\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fc5dcd58-e32e-4916-8d65-8fc58be8228b",
+          "name": "Google Cloud Secret Manager Create a secret",
+          "request": {
+            "name": "Google Cloud Secret Manager Create a secret",
+            "description": {
+              "content": "Creates a new secret in a project.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "secretId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"replication\": {\n    \"automatic\": {\n      \"customerManagedEncryption\": {\n        \"kmsKeyName\": \"<string>\"\n      }\n    },\n    \"userManaged\": {\n      \"replicas\": [\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        },\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        }\n      ]\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"labels\": {\n    \"key_0\": \"<string>\"\n  },\n  \"topics\": [\n    {\n      \"name\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\"\n    }\n  ],\n  \"expireTime\": \"<dateTime>\",\n  \"ttl\": \"<string>\",\n  \"etag\": \"<string>\",\n  \"rotation\": {\n    \"nextRotationTime\": \"<dateTime>\",\n    \"rotationPeriod\": \"<string>\"\n  },\n  \"versionAliases\": {\n    \"key_0\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "895cac00-08b8-46f3-bc54-ea3193319c09",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "secretId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"replication\": {\n    \"automatic\": {\n      \"customerManagedEncryption\": {\n        \"kmsKeyName\": \"<string>\"\n      }\n    },\n    \"userManaged\": {\n      \"replicas\": [\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        },\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        }\n      ]\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"labels\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\"\n  },\n  \"topics\": [\n    {\n      \"name\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\"\n    }\n  ],\n  \"expireTime\": \"<dateTime>\",\n  \"ttl\": \"<string>\",\n  \"etag\": \"<string>\",\n  \"rotation\": {\n    \"nextRotationTime\": \"<dateTime>\",\n    \"rotationPeriod\": \"<string>\"\n  },\n  \"versionAliases\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"replication\": {\n    \"automatic\": {\n      \"customerManagedEncryption\": {\n        \"kmsKeyName\": \"string\"\n      }\n    },\n    \"userManaged\": {\n      \"replicas\": [\n        {\n          \"location\": \"string\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        },\n        {\n          \"location\": \"string\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        }\n      ]\n    }\n  },\n  \"createTime\": \"2008-07-27T00:23:11.058Z\",\n  \"labels\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"topics\": [\n    {\n      \"name\": \"string\"\n    },\n    {\n      \"name\": \"string\"\n    }\n  ],\n  \"expireTime\": \"1988-06-10T20:19:17.914Z\",\n  \"ttl\": \"string\",\n  \"etag\": \"string\",\n  \"rotation\": {\n    \"nextRotationTime\": \"1964-03-23T11:44:47.962Z\",\n    \"rotationPeriod\": \"string\"\n  },\n  \"versionAliases\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c8144e18-f671-4c27-b392-8e675d4816c8",
+          "name": "Google Cloud Secret Manager Get a secret",
+          "request": {
+            "name": "Google Cloud Secret Manager Get a secret",
+            "description": {
+              "content": "Retrieves metadata about a secret.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets",
+                ":secretId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "secretId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b38dfc58-9447-4903-b451-13da31dc1405",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets",
+                    ":secretId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "secretId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"replication\": {\n    \"automatic\": {\n      \"customerManagedEncryption\": {\n        \"kmsKeyName\": \"string\"\n      }\n    },\n    \"userManaged\": {\n      \"replicas\": [\n        {\n          \"location\": \"string\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        },\n        {\n          \"location\": \"string\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        }\n      ]\n    }\n  },\n  \"createTime\": \"2008-07-27T00:23:11.058Z\",\n  \"labels\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"topics\": [\n    {\n      \"name\": \"string\"\n    },\n    {\n      \"name\": \"string\"\n    }\n  ],\n  \"expireTime\": \"1988-06-10T20:19:17.914Z\",\n  \"ttl\": \"string\",\n  \"etag\": \"string\",\n  \"rotation\": {\n    \"nextRotationTime\": \"1964-03-23T11:44:47.962Z\",\n    \"rotationPeriod\": \"string\"\n  },\n  \"versionAliases\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d32bd6a0-1c3f-4b97-9a10-0978de65de62",
+          "name": "Google Cloud Secret Manager Update a secret",
+          "request": {
+            "name": "Google Cloud Secret Manager Update a secret",
+            "description": {
+              "content": "Updates metadata of a secret.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets",
+                ":secretId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "updateMask",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "secretId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"replication\": {\n    \"automatic\": {\n      \"customerManagedEncryption\": {\n        \"kmsKeyName\": \"<string>\"\n      }\n    },\n    \"userManaged\": {\n      \"replicas\": [\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        },\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        }\n      ]\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"labels\": {\n    \"key_0\": \"<string>\"\n  },\n  \"topics\": [\n    {\n      \"name\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\"\n    }\n  ],\n  \"expireTime\": \"<dateTime>\",\n  \"ttl\": \"<string>\",\n  \"etag\": \"<string>\",\n  \"rotation\": {\n    \"nextRotationTime\": \"<dateTime>\",\n    \"rotationPeriod\": \"<string>\"\n  },\n  \"versionAliases\": {\n    \"key_0\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6f3ec30c-ffbc-4085-bf2e-daad08f4653e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets",
+                    ":secretId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "updateMask",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "secretId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"replication\": {\n    \"automatic\": {\n      \"customerManagedEncryption\": {\n        \"kmsKeyName\": \"<string>\"\n      }\n    },\n    \"userManaged\": {\n      \"replicas\": [\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        },\n        {\n          \"location\": \"<string>\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"<string>\"\n          }\n        }\n      ]\n    }\n  },\n  \"createTime\": \"<dateTime>\",\n  \"labels\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\"\n  },\n  \"topics\": [\n    {\n      \"name\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\"\n    }\n  ],\n  \"expireTime\": \"<dateTime>\",\n  \"ttl\": \"<string>\",\n  \"etag\": \"<string>\",\n  \"rotation\": {\n    \"nextRotationTime\": \"<dateTime>\",\n    \"rotationPeriod\": \"<string>\"\n  },\n  \"versionAliases\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"replication\": {\n    \"automatic\": {\n      \"customerManagedEncryption\": {\n        \"kmsKeyName\": \"string\"\n      }\n    },\n    \"userManaged\": {\n      \"replicas\": [\n        {\n          \"location\": \"string\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        },\n        {\n          \"location\": \"string\",\n          \"customerManagedEncryption\": {\n            \"kmsKeyName\": \"string\"\n          }\n        }\n      ]\n    }\n  },\n  \"createTime\": \"2008-07-27T00:23:11.058Z\",\n  \"labels\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"topics\": [\n    {\n      \"name\": \"string\"\n    },\n    {\n      \"name\": \"string\"\n    }\n  ],\n  \"expireTime\": \"1988-06-10T20:19:17.914Z\",\n  \"ttl\": \"string\",\n  \"etag\": \"string\",\n  \"rotation\": {\n    \"nextRotationTime\": \"1964-03-23T11:44:47.962Z\",\n    \"rotationPeriod\": \"string\"\n  },\n  \"versionAliases\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e6bc70d1-6f11-4f7b-bdbd-14390b69e5fe",
+          "name": "Google Cloud Secret Manager Delete a secret",
+          "request": {
+            "name": "Google Cloud Secret Manager Delete a secret",
+            "description": {
+              "content": "Deletes a secret and all of its versions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "secrets",
+                ":secretId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "secretId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ac733a55-807f-494b-87e0-6b6e30c39360",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "secrets",
+                    ":secretId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "secretId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://secretmanager.googleapis.com/v1",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "secretId"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "versionId"
+    }
+  ],
+  "info": {
+    "_postman_id": "426071a4-733a-42e6-9c50-94420555e26b",
+    "name": "Google Cloud Secret Manager API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Secret Manager API enables creating, managing, and accessing secrets and their versions, providing secure storage for sensitive configuration data and credentials.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}
