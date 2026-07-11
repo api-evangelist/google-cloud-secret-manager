@@ -43,6 +43,12 @@ apis:
       - type: JSONLDContext
         url: json-ld/context.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-cloud-secret-manager-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-cloud-secret-manager-domain-security.yml
+  - type: Authentication
+    url: authentication/google-cloud-secret-manager-authentication.yml
   - type: OAuthScopes
     url: scopes/google-cloud-secret-manager-scopes.yml
   - type: GitHubOrganization
