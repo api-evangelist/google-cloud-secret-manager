@@ -1,0 +1,16 @@
+{
+  "provider": "google-cloud-secret-manager",
+  "sources": [
+    "google-cloud-secret-manager-secret-versions-api-openapi.yml",
+    "google-cloud-secret-manager-secrets-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-cloud-secret-manager-secret-versions-api-openapi.yml",
+    "google-cloud-secret-manager-secrets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
