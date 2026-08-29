@@ -4,6 +4,18 @@ description: >-
   Google Cloud Secret Manager is a secure and convenient storage system for API keys, passwords, certificates, and other
   sensitive data. It provides a central place to manage, access, and audit secrets across Google Cloud with automatic
   versioning, IAM-based access control, and audit logging.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
