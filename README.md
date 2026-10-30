@@ -1,4 +1,4 @@
-# Google Cloud Secret Manager (google-cloud-secret-manager)
+# Google Cloud Secret Manager
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,69 +66,153 @@
 
 Google Cloud Secret Manager is a secure and convenient storage system for API keys, passwords, certificates, and other sensitive data. It provides a central place to manage, access, and audit secrets across Google Cloud with automatic versioning, IAM-based access control, and audit logging.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-secret-manager/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-secret-manager/refs/heads/main/apis.yml)
+**Areas:** Configuration · Credentials · Google Cloud · Key Management · Secrets · Security
 
-## Scope
+## Google Cloud Secret Manager on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Cloud Secret Manager is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-cloud-secret-manager/](https://apis.io/providers/google-cloud-secret-manager/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- Configuration
-- Credentials
-- Google Cloud
-- Key Management
-- Secrets
-- Security
+- [Google Cloud Secret Manager Secret Versions API](https://apis.io/apis/google-cloud-secret-manager/google-cloud-secret-manager-secret-versions-api/) — The Secret Versions API from Google Cloud Secret Manager — 4 operation(s) for secret versions.
+- [Google Cloud Secret Manager Secrets API](https://apis.io/apis/google-cloud-secret-manager/google-cloud-secret-manager-secrets-api/) — The Secrets API from Google Cloud Secret Manager — 2 operation(s) for secrets.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Cloud Secret Manager API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Secret Manager API enables creating, managing, and accessing secrets and their versions, providing secure storage for sensitive configuration data and credentials.
+- [Google Cloud Secret Manager Agentic Access](https://apis.io/agentic-access/google-cloud-secret-manager/google-cloud-secret-manager-agentic-access/)
 
-- **Human URL:** [https://cloud.google.com/secret-manager](https://cloud.google.com/secret-manager)
-- **Base URL:** `https://secretmanager.googleapis.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Configuration
-- Secrets
-- Security
-- Versions
+- [Secret](https://apis.io/schemas/google-cloud-secret-manager/secret/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://cloud.google.com/secret-manager/docs/reference/rest)
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://cloud.google.com/docs/authentication)
-- [Getting Started](https://cloud.google.com/secret-manager/docs/quickstart)
-- [JSON Schema](json-schema/secret.json) — [JSON Schema](https://json-schema.org/specification)
-- [J S O N L D Context](json-ld/context.jsonld)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [context Context](https://apis.io/jsonld/google-cloud-secret-manager/context/)
 
-- [GitHub Organization](https://github.com/GoogleCloudPlatform)
-- [Portal](https://cloud.google.com/secret-manager)
-- [Getting Started](https://cloud.google.com/secret-manager/docs/quickstart)
+#### Collections (5)
+
+Postman and Open Collection request collections.
+
+- [Google Cloud Secret Manager Secret Versions API](https://apis.io/collections/google-cloud-secret-manager/open-google-cloud-secret-manager-secret-versions-api/)
+- [Google Cloud Secret Manager Secret Versions Secrets API](https://apis.io/collections/google-cloud-secret-manager/open-google-cloud-secret-manager-secrets-api/)
+- [Google Cloud Secret Manager API](https://apis.io/collections/google-cloud-secret-manager/open-openapi/)
+- [Google Cloud Secret Manager Secret Versions API](https://apis.io/collections/google-cloud-secret-manager/postman-google-cloud-secret-manager-secret-versions-api/)
+- [Google Cloud Secret Manager Secret Versions Secrets API](https://apis.io/collections/google-cloud-secret-manager/postman-google-cloud-secret-manager-secrets-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Cloud Secret Manager — jsonschema rules](https://apis.io/rules/google-cloud-secret-manager/google-cloud-secret-manager-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Cloud Secret Manager Authentication](https://apis.io/security/google-cloud-secret-manager/google-cloud-secret-manager-authentication/)
+- [Google Cloud Secret Manager Domain Security](https://apis.io/security/google-cloud-secret-manager/google-cloud-secret-manager-domain-security/)
+- [Google Cloud Secret Manager Vulnerability Disclosure](https://apis.io/security/google-cloud-secret-manager/google-cloud-secret-manager-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Cloud Secret Manager Scopes](https://apis.io/scopes/google-cloud-secret-manager/google-cloud-secret-manager-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Cloud Secret Manager Plans Pricing](https://apis.io/plans/google-cloud-secret-manager/google-cloud-secret-manager-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Cloud Secret Manager Rate Limits](https://apis.io/rate-limits/google-cloud-secret-manager/google-cloud-secret-manager-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Cloud Secret Manager Finops](https://apis.io/finops/google-cloud-secret-manager/google-cloud-secret-manager-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://cloud.google.com/secret-manager/docs)
-- [Authentication](https://cloud.google.com/docs/authentication)
+- [Getting started](https://cloud.google.com/secret-manager/docs/quickstart)
 - [Pricing](https://cloud.google.com/secret-manager/pricing)
-- [Terms of Service](https://cloud.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://cloud.google.com/secret-manager/docs/support)
-- [J S O N L D Context](json-ld/context.jsonld)
-- [Integrations](https://cloud.google.com/marketplace)
+- [Blog](https://cloud.google.com/feeds/secret-manager-release-notes.xml)
+- [Terms of service](https://cloud.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/GoogleCloudPlatform)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 47.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 54.2 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 51.2 |
+| Access clarity | 39.5 |
+
+**Agent readiness 24.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 40.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-cloud-secret-manager/](https://apis.io/providers/google-cloud-secret-manager/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Cloud Secret Manager: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-cloud-secret-manager/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
